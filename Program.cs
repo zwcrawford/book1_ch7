@@ -6,16 +6,31 @@ namespace Classes
 	/******************************* EMPLOYEE CLASS *******************************/
 	public class Employee {
 
-	// An employee has the following properties: firstName, lastName, title, startDate.
+		// An employee has the following properties: firstName, lastName, title, startDate.
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 		public string Title { get; set; }
 		public DateTime StartDate { get; set; }
+
+		// Concatenating the first and last names of each employee
+		public string FullName
+		{
+			get
+			{
+			return string.Format($"{FirstName} + {LastName}");
+			}
+		}
 	}
+
 	/******************************* COMPANY CLASS *******************************/
 	public class Company
 	{
-		public Company(string name, DateTime DateTime, string Employees)
+    	/*
+			Create a constructor method that accepts two arguments:
+				1. The name of the company
+				2. The date it was created
+			*/
+		public Company(string name, DateTime DateTime)
 		{
 			name = ($"FirstName + LastName");
 			DateTime = DateTime.Now;
@@ -24,16 +39,12 @@ namespace Classes
     	public string Name { get; }
 			public DateTime CreatedOn { get; }
     	// Create a public property for holding a list of current employees
-			public List<string> Employees = new List<string>();
-    	/*
-				Create a constructor method that accepts two arguments:
-						1. The name of the company
-						2. The date it was created
-			*/
-			public string ListEmployees(string FirstName)
-			{
-				return Employee[FirstName]
-			};
+			public List<string> EmployeeList = new List<string>();
+			// public string ListEmployees(string FirstName)
+			// {
+			// }
+
+			employees.Add("Zac", "Crawford", "COO", DateTime)
 		//The constructor will set the value of the public properties
 }
 /******************************* PROGRAM CLASS *******************************/
@@ -42,11 +53,8 @@ class Program
     static void Main(string[] args)
     {
 		// Create an instance of a company. Name it whatever you like.
-		Company WidgetsInc = new Company()
-		{
-			name = CoName,
-			DateTime = DateTime,
-		};
+		Company WidgetsInc = new Company("WidgetsInc", 04/20/2018);
+
 		// Create three employees
 		Employee zac = new Employee()
 		{
@@ -69,12 +77,16 @@ class Program
 			Title = "CFO",
 			StartDate = DateTime.Now
 		};
-		// Assign the employees to the company
-
+		// Print full name
+		Console.WriteLine($"{zac.FullName}");
 		/*
 			Iterate the company's employee list and generate the
 			simple report shown above
 		*/
+
+		// What I want the output to be:
+
+		// "{Employee (firstName + lastName)} works for {Company Name} as {title} since {DateTime}"
     }
 	}
 }
