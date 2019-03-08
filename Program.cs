@@ -40,16 +40,13 @@ namespace Classes
 			public DateTime CreatedOn { get; }
     	// Create a public property for holding a list of current employees
 			public List<string> EmployeeList = new List<string>();
-			// public string ListEmployees(string FirstName)
-			// {
-			// }
 
-			employees.Add("Zac", "Crawford", "COO", DateTime)
+			EmployeeList.Add("Zac", "Crawford", "COO", DateTime)
 		//The constructor will set the value of the public properties
-}
-/******************************* PROGRAM CLASS *******************************/
-class Program
-{
+	}
+	/******************************* PROGRAM CLASS *******************************/
+	class Program
+	{
     static void Main(string[] args)
     {
 		// Create an instance of a company. Name it whatever you like.
@@ -87,6 +84,9 @@ class Program
 		// What I want the output to be:
 
 		// "{Employee (firstName + lastName)} works for {Company Name} as {title} since {DateTime}"
+		Console.WriteLine($"{zac.FullName}");
+		Console.WriteLine($"{grady.FullName}");
+		Console.WriteLine($"{colleen.FullName}");
     }
 	}
 }
