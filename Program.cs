@@ -30,11 +30,12 @@ namespace Classes
 				1. The name of the company
 				2. The date it was created
 			*/
-		public Company(string name, DateTime DateTime)
+		public Company(string name, DateTime CompanyStart)
 		{
 			name = Name;
-			DateTime = DateTime.Now;
+			CreatedOn = CompanyStart;
 		}
+		DateTime CompanyStart = new DateTime(2010, 6, 10);
     	// Some readonly properties (let's talk about gets, baby)
     	public string Name { get; }
 			public DateTime CreatedOn { get; }
@@ -74,10 +75,7 @@ namespace Classes
 			Title = "CFO",
 			StartDate = colleenStart
 		};
-		/*
-			Iterate the company's employee list and generate the
-			simple report shown above
-		*/
+		Company MyCompany = new Company( "WidgetsInc", DateTime.Now);
 
 		// What I want the output to be:
 
@@ -92,6 +90,8 @@ namespace Classes
 		Console.WriteLine($"{grady.FullName} works for");
 		Console.WriteLine($"{colleen.FullName} works for");
 		Console.WriteLine($"{zac.StartDate.ToString("MM/dd/yyyy")}");
+		Console.WriteLine($"{colleen.FullName} works for");
+		Console.WriteLine($"{MyCompany.Name}");
     }
 	}
 }
