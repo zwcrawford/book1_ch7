@@ -17,7 +17,7 @@ namespace Classes
 		{
 			get
 			{
-			return string.Format($"{FirstName} + {LastName}");
+			return string.Format($"{FirstName} {LastName}");
 			}
 		}
 	}
@@ -32,7 +32,7 @@ namespace Classes
 			*/
 		public Company(string name, DateTime DateTime)
 		{
-			name = ($"FirstName + LastName");
+			name = Name;
 			DateTime = DateTime.Now;
 		}
     	// Some readonly properties (let's talk about gets, baby)
@@ -40,8 +40,6 @@ namespace Classes
 			public DateTime CreatedOn { get; }
     	// Create a public property for holding a list of current employees
 			public List<string> EmployeeList = new List<string>();
-
-			EmployeeList.Add("Zac", "Crawford", "COO", DateTime)
 		//The constructor will set the value of the public properties
 	}
 	/******************************* PROGRAM CLASS *******************************/
@@ -50,32 +48,32 @@ namespace Classes
     static void Main(string[] args)
     {
 		// Create an instance of a company. Name it whatever you like.
-		Company WidgetsInc = new Company("WidgetsInc", 04/20/2018);
-
+		//Company WidgetsInc = new Company("WidgetsInc");
+		DateTime zacStart = new DateTime(2011, 6, 10);
+		DateTime gradyStart = new DateTime(2013, 6, 10);
+		DateTime colleenStart = new DateTime(2015 , 6, 10);
 		// Create three employees
 		Employee zac = new Employee()
 		{
 			FirstName = "Zac",
 			LastName = "Crawford",
 			Title = "COO",
-			StartDate = DateTime.Now
+			StartDate = zacStart
 		};
 		Employee grady = new Employee()
 		{
 			FirstName = "Grady",
 			LastName = "Robbins",
 			Title = "CEO",
-			StartDate = DateTime.Now
+			StartDate = gradyStart
 		};
 		Employee colleen = new Employee()
 		{
 			FirstName = "Colleen",
 			LastName = "Woosley",
 			Title = "CFO",
-			StartDate = DateTime.Now
+			StartDate = colleenStart
 		};
-		// Print full name
-		Console.WriteLine($"{zac.FullName}");
 		/*
 			Iterate the company's employee list and generate the
 			simple report shown above
@@ -84,9 +82,16 @@ namespace Classes
 		// What I want the output to be:
 
 		// "{Employee (firstName + lastName)} works for {Company Name} as {title} since {DateTime}"
-		Console.WriteLine($"{zac.FullName}");
-		Console.WriteLine($"{grady.FullName}");
-		Console.WriteLine($"{colleen.FullName}");
+
+		// Print full name - check.
+		// Print Company name -
+		// Print Title -
+		// Print DateTime -
+
+		Console.WriteLine($"{zac.FullName} works for");
+		Console.WriteLine($"{grady.FullName} works for");
+		Console.WriteLine($"{colleen.FullName} works for");
+		Console.WriteLine($"{zac.StartDate.ToString("MM/dd/yyyy")}");
     }
 	}
 }
