@@ -1,0 +1,11 @@
+/Users/zac_crawford/workspace/csharp/classes/obj/Debug/netcoreapp2.2/classes.csprojAssemblyReference.cache
+/Users/zac_crawford/workspace/csharp/classes/obj/Debug/netcoreapp2.2/classes.csproj.CoreCompileInputs.cache
+/Users/zac_crawford/workspace/csharp/classes/obj/Debug/netcoreapp2.2/classes.AssemblyInfoInputs.cache
+/Users/zac_crawford/workspace/csharp/classes/obj/Debug/netcoreapp2.2/classes.AssemblyInfo.cs
+/Users/zac_crawford/workspace/csharp/classes/bin/Debug/netcoreapp2.2/classes.deps.json
+/Users/zac_crawford/workspace/csharp/classes/bin/Debug/netcoreapp2.2/classes.runtimeconfig.json
+/Users/zac_crawford/workspace/csharp/classes/bin/Debug/netcoreapp2.2/classes.runtimeconfig.dev.json
+/Users/zac_crawford/workspace/csharp/classes/bin/Debug/netcoreapp2.2/classes.dll
+/Users/zac_crawford/workspace/csharp/classes/bin/Debug/netcoreapp2.2/classes.pdb
+/Users/zac_crawford/workspace/csharp/classes/obj/Debug/netcoreapp2.2/classes.dll
+/Users/zac_crawford/workspace/csharp/classes/obj/Debug/netcoreapp2.2/classes.pdb
